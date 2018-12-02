@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="30">
+
+    <title>My Metro Transit</title>
+    <link href="styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+<div class="container">
+<div class="main">
+    <h1>Welcome to the TGTMetroTransit Application!</h1>
+    <h4>By: Ethan King</h4>
+        <div>
+            <h3>Providers</h3>
+            <div><select id="providerBox"
+                    onchange="getProviderBox(this.value);" 
+                        name="provider">
+            </select>
+            </div>
+            <br>
+        <h3>Routes</h3>
+            <select 
+                    id="routeBox"
+                    onchange="
+                    getRouteBox(this.value);
+                    generateDirectionBox(this.value);"
+                    name="route">
+            </select>
+        <h3>Directions</h3>
+            <select
+                    id="directionBox"
+                    onchange="getDirectionBox(this.value);
+                    generateStopBox(this.value);"
+                    name="direction">
+            </select>
+        
+            <h3>Stops</h3>
+                <select
+                        id="stopBox"
+                        onchange="getStopBox();"
+                        name="stop">
+                </select>
+                <br>
+                <br>
+            <button id="displaySearchButton">Search for next departure</button>
+            <p id=results>
+                Departure Time's for the rest of the day: 
+            </p>
+        <script>
+        
+        </script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+        crossorigin="anonymous"></script>
+    <script src="tgtmt.js"></script>
+</div>
+</div>
+</body>
