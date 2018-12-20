@@ -67,6 +67,7 @@ fetch(pUrl)
             option = document.createElement('option');
               option.text = data[i].Description;
               option.value = data[i].ProviderID;
+              option.value = data[i].Route;
               rBox.add(option);
           }    
         });  
@@ -90,7 +91,7 @@ $('#providerBox').on("change", function() {
     $('#routeBox').val([]);
 })
 ////////////////////////////////////
-//              DIRECTIONS        //
+//             DIRECTIONS         //
 ////////////////////////////////////
     //create a function to generate directions data (requires route perameter)
 function generateDirectionBox(route_num) {
@@ -236,4 +237,4 @@ $(document).on('click', '#displaySearchButton', function () {
       alert('Fetch Error -', err);  
     });//end of catch  
 
-});//end of function
+});//end of function7
